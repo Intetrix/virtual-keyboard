@@ -1,43 +1,43 @@
 import { createElement } from "./createElement.js";
 
-const keyboardSection = createElement({
+const keyboardSection = new createElement({
   type: "section",
   className: "keyboard-app",
   text: null,
-  append: ".body",
+  append: document.body,
 });
 
-const description = createElement({
+const description = new createElement({
   type: "div",
   className: "description",
   text: null,
-  append: ".keyboard-app",
+  append: keyboardSection.element,
 });
 
-const descriptionItem = createElement({
+const descriptionItem = new createElement({
   type: "span",
   className: "description__item",
   text: "Клавиатура создана в операционной системе Windows.",
-  append: ".description",
+  append: description.element,
 });
 
-const descriptionItem2 = createElement({
+const descriptionItem2 = new createElement({
   type: "span",
   className: "description__item",
   text: "Для переключения языка используйте комбинацию Ctrl + Alt.",
-  append: ".description",
+  append: description.element,
 });
 
-const textarea = createElement({
+const textarea = new createElement({
   type: "textarea",
   className: "textarea",
   text: null,
-  append: ".keyboard-app",
+  append: keyboardSection.element,
 });
 
-const keyboard = createElement({
+const keyboard = new createElement({
   type: "div",
   className: "keyboard",
   text: null,
-  append: ".keyboard-app",
+  append: keyboardSection.element,
 });
