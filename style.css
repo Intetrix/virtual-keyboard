@@ -29,15 +29,13 @@
 }
 
 .keyboard {
+  display: flex;
+  flex-wrap: wrap;
   width: 1030px;
   height: 350px;
   background-color: #d5d5d5;
   padding: 15px;
   border-radius: 5px;
-}
-
-.keyboard__row {
-  display: flex;
 }
 
 .keys {
@@ -69,7 +67,7 @@
 }
 
 .backspace-key {
-  width: 120px;
+  width: 110px;
   background-color: #f7fff4;
 }
 
