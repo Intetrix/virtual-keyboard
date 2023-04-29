@@ -1,4 +1,4 @@
-export class createElement {
+export class CreateElement {
   constructor({ type, className, text, append }) {
     const element = document.createElement(type);
     element.classList.add(className);
