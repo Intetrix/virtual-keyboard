@@ -1,23 +1,4 @@
-let iventWhich = [
-  27, 192, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 189, 187, 8, 9, 81, 87, 69,
-  82, 84, 89, 85, 73, 79, 80, 219, 221, 220, 20, 65, 83, 68, 70, 71, 72, 74, 75,
-  76, 186, 222, 13, 16, 90, 88, 67, 86, 66, 78, 77, 188, 190, 191, 38, 16, 17,
-  91, 18, 32, 18, 37, 40, 39, 17,
-];
-
-function createElement({ type, className, text, append }) {
-  const elementType = type;
-  const elementClass = className;
-  const elementContent = text;
-  const elementAppendTo = append;
-
-  const element = document.createElement(elementType);
-  element.className = elementClass;
-  element.innerText = elementContent;
-  document.querySelector(elementAppendTo).appendChild(element);
-
-  return element;
-}
+import { createElement } from "./createElement.js";
 
 const keyboardSection = createElement({
   type: "section",
