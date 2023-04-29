@@ -2,7 +2,7 @@ export const arrayOfKeys = [
   {
     eventWhich: 27,
     type: "div",
-    className: "keys",
+    className: "keys, esc-key",
     text: "Esc",
   },
   {
@@ -86,13 +86,13 @@ export const arrayOfKeys = [
   {
     eventWhich: 8,
     type: "div",
-    className: "keys",
+    className: "keys, backspace-key",
     text: "Backspace",
   },
   {
     eventWhich: 9,
     type: "div",
-    className: "keys",
+    className: "keys, tab-key",
     text: "Tab",
   },
   {
@@ -170,13 +170,13 @@ export const arrayOfKeys = [
   {
     eventWhich: 220,
     type: "div",
-    className: "keys",
+    className: "keys, slash-key",
     text: "\\",
   },
   {
     eventWhich: 20,
     type: "div",
-    className: "keys",
+    className: "keys, capslock-key",
     text: "Caps Lock",
   },
   {
@@ -248,13 +248,13 @@ export const arrayOfKeys = [
   {
     eventWhich: 13,
     type: "div",
-    className: "keys",
+    className: "keys, enter-key",
     text: "Enter",
   },
   {
     eventWhich: 16,
     type: "div",
-    className: "keys",
+    className: "keys, shift-key, shift-left",
     text: "Shift",
   },
   {
@@ -320,67 +320,67 @@ export const arrayOfKeys = [
   {
     eventWhich: 38,
     type: "div",
-    className: "keys",
+    className: "keys, up-arrow-key",
     text: "↑",
   },
   {
     eventWhich: 16,
     type: "div",
-    className: "keys",
+    className: "keys, shift-key, shift-right",
     text: "Shift",
   },
   {
     eventWhich: 17,
     type: "div",
-    className: "keys",
+    className: "keys, ctrl-key, ctrl-left",
     text: "Ctrl",
   },
   {
     eventWhich: 255,
     type: "div",
-    className: "keys",
+    className: "keys, win-key",
     text: "Win",
   },
   {
     eventWhich: 18,
     type: "div",
-    className: "keys",
+    className: "keys, alt-key, alt-left",
     text: "Alt",
   },
   {
     eventWhich: 32,
     type: "div",
-    className: "keys",
+    className: "keys, space-key",
     text: " ",
   },
   {
     eventWhich: 18,
     type: "div",
-    className: "keys",
+    className: "keys, alt-key, alt-right",
     text: "Alt",
   },
   {
     eventWhich: 37,
     type: "div",
-    className: "keys",
+    className: "keys, left-arrow-key",
     text: "←",
   },
   {
     eventWhich: 40,
     type: "div",
-    className: "keys",
+    className: "keys, down-arrow-key",
     text: "↓",
   },
   {
     eventWhich: 39,
     type: "div",
-    className: "keys",
+    className: "keys, right-arrow-key",
     text: "→",
   },
   {
     eventWhich: 17,
     type: "div",
-    className: "keys",
+    className: "keys, ctrl-key, ctrl-right",
     text: "Ctrl",
   },
 ];
