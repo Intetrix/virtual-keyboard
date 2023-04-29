@@ -5,34 +5,58 @@ let iventWhich = [
   91, 18, 32, 18, 37, 40, 39, 17,
 ];
 
-const keyboardSection = document.createElement("section");
-keyboardSection.className = "keyboard-app";
-document.body.appendChild(keyboardSection);
+function createElement({ type, className, text, append }) {
+  const elementType = type;
+  const elementClass = className;
+  const elementContent = text;
+  const elementAppendTo = append;
 
-const description = document.createElement("div");
-description.className = "description";
-keyboardSection.appendChild(description);
+  const element = document.createElement(elementType);
+  element.className = elementClass;
+  element.innerText = elementContent;
+  document.querySelector(elementAppendTo).appendChild(element);
 
-const descriptionItem = document.createElement("span");
-descriptionItem.className = "description__item1";
-let text1 = document.createTextNode(
-  "Клавиатура создана в операционной системе Windows."
-);
-descriptionItem.appendChild(text1);
-description.appendChild(descriptionItem);
+  return element;
+}
 
-const descriptionItem2 = document.createElement("span");
-descriptionItem2.className = "description__item2";
-let text2 = document.createTextNode(
-  "Для переключения языка используйте комбинацию Ctrl + Alt."
-);
-descriptionItem2.appendChild(text2);
-description.appendChild(descriptionItem2);
+const keyboardSection = createElement({
+  type: "section",
+  className: "keyboard-app",
+  text: null,
+  append: ".body",
+});
 
-const textarea = document.createElement("textarea");
-textarea.className = "textarea";
-keyboardSection.appendChild(textarea);
+const description = createElement({
+  type: "div",
+  className: "description",
+  text: null,
+  append: ".keyboard-app",
+});
 
-const keyboard = document.createElement("div");
-keyboard.className = "keyboard";
-keyboardSection.appendChild(keyboard);
+const descriptionItem = createElement({
+  type: "span",
+  className: "description__item",
+  text: "Клавиатура создана в операционной системе Windows.",
+  append: ".description",
+});
+
+const descriptionItem2 = createElement({
+  type: "span",
+  className: "description__item",
+  text: "Для переключения языка используйте комбинацию Ctrl + Alt.",
+  append: ".description",
+});
+
+const textarea = createElement({
+  type: "textarea",
+  className: "textarea",
+  text: null,
+  append: ".keyboard-app",
+});
+
+const keyboard = createElement({
+  type: "div",
+  className: "keyboard",
+  text: null,
+  append: ".keyboard-app",
+});
