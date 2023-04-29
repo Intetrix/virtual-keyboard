@@ -1,4 +1,5 @@
 import { CreateElement } from "./createElement.js";
+import { arrayOfKeys } from "./keysArray.js";
 
 export class RenderElement {
   constructor() {
@@ -12,6 +13,7 @@ export class RenderElement {
       text: null,
       append: document.body,
     });
+
     const description = new CreateElement({
       type: "div",
       className: "description",
@@ -46,5 +48,14 @@ export class RenderElement {
       text: null,
       append: keyboardSection.element,
     });
+
+    for (let i = 0; i < arrayOfKeys.length; i++) {
+      const key = new CreateElement({
+        type: arrayOfKeys[i].type,
+        className: arrayOfKeys[i].className,
+        text: arrayOfKeys[i].text,
+        append: keyboard.element,
+      });
+    }
   }
 }
