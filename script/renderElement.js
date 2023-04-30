@@ -21,21 +21,21 @@ export class RenderElement {
       append: keyboardSection.element,
     });
 
-    const descriptionItem = new CreateElement({
+    new CreateElement({
       type: "span",
       className: ["description__item"],
       text: "Клавиатура создана в операционной системе Windows.",
       append: description.element,
     });
 
-    const descriptionItem2 = new CreateElement({
+    new CreateElement({
       type: "span",
       className: ["description__item"],
       text: "Для переключения языка используйте комбинацию Ctrl + Alt.",
       append: description.element,
     });
 
-    const textarea = new CreateElement({
+    new CreateElement({
       type: "textarea",
       className: ["textarea"],
       text: null,
@@ -54,6 +54,7 @@ export class RenderElement {
         type: arrayOfKeys[i].type,
         className: arrayOfKeys[i].className.split(", "),
         text: arrayOfKeys[i].text,
+        code: arrayOfKeys[i].code,
         append: keyboard.element,
       });
     }
