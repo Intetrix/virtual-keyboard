@@ -203,6 +203,13 @@ export const arrayOfKeys = [
     code: "Backslash",
   },
   {
+    eventWhich: 46,
+    type: "div",
+    className: "keys, del-key",
+    text: "Del",
+    code: "Delete",
+  },
+  {
     eventWhich: 20,
     type: "div",
     className: "keys, capslock-key",

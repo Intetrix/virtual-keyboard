@@ -75,7 +75,10 @@
 }
 
 .slash-key {
-  width: 117px;
+  background-color: #f7fff4;
+}
+
+.del-key {
   background-color: #f7fff4;
 }
 

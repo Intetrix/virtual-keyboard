@@ -4,7 +4,6 @@ export class KeyStroke {
   constructor() {
     document.addEventListener("keydown", (event) => {
       arrayOfKeys.forEach((el) => {
-        console.log(event.code);
         if (event.code === el.code) {
           document.getElementById(`${event.code}`).classList.add("active");
         }
