@@ -2,11 +2,36 @@ import { arrayOfKeys } from "./keysArray.js";
 
 export class KeyStroke {
   constructor() {
-    const textarea = document.querySelector(".textarea");
+    this.keydownListener();
+    this.keyupListener();
+    this.specialFeatures();
+  }
+
+  keydownListener() {
     document.addEventListener("keydown", (event) => {
       arrayOfKeys.forEach((el) => {
         if (event.code === el.code) {
           document.getElementById(`${event.code}`).classList.add("active");
+        }
+      });
+    });
+  }
+
+  keyupListener() {
+    document.addEventListener("keyup", (event) => {
+      arrayOfKeys.forEach((el) => {
+        if (event.code === el.code) {
+          document.getElementById(`${event.code}`).classList.remove("active");
+        }
+      });
+    });
+  }
+
+  specialFeatures() {
+    const textarea = document.querySelector(".textarea");
+    document.addEventListener("keydown", (event) => {
+      arrayOfKeys.forEach((el) => {
+        if (event.code === el.code) {
           if (
             event.code === "ArrowUp" ||
             event.code === "ArrowLeft" ||
@@ -14,15 +39,10 @@ export class KeyStroke {
             event.code === "ArrowDown"
           ) {
             textarea.value += el.text;
+          } else if (event.code === "Tab") {
+            event.preventDefault();
+            textarea.value += "    ";
           }
-        }
-      });
-    });
-
-    document.addEventListener("keyup", (event) => {
-      arrayOfKeys.forEach((el) => {
-        if (event.code === el.code) {
-          document.getElementById(`${event.code}`).classList.remove("active");
         }
       });
     });
