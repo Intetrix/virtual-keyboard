@@ -42,6 +42,8 @@ export class KeyStroke {
           } else if (event.code === "Tab") {
             event.preventDefault();
             textarea.value += "    ";
+          } else if (event.code === "AltLeft" || event.code === "AltRight") {
+            event.preventDefault();
           }
         }
       });

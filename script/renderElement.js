@@ -53,7 +53,7 @@ export class RenderElement {
 
     for (let i = 0; i < arrayOfKeys.length; i++) {
       const key = new CreateElement({
-        type: arrayOfKeys[i].type,
+        type: "div",
         className: arrayOfKeys[i].className.split(", "),
         text: arrayOfKeys[i].text,
         code: arrayOfKeys[i].code,
