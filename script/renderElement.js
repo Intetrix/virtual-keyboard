@@ -42,6 +42,8 @@ export class RenderElement {
       append: keyboardSection.element,
     });
 
+    document.querySelector(".textarea").focus();
+
     const keyboard = new CreateElement({
       type: "div",
       className: ["keyboard"],
