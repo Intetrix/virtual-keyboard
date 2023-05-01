@@ -4,8 +4,8 @@
   "description": "Virtual keyboard task for RS School",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ./index.js",
-    "lint:fix": "eslint ./index.js --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "author": "",
   "license": "ISC",

@@ -1,4 +1,4 @@
-import { arrayOfKeys } from "./keysArray.js";
+import { arrayOfKeys } from './keysArray.js';
 
 export class KeyStroke {
   constructor() {
@@ -8,41 +8,41 @@ export class KeyStroke {
   }
 
   keydownListener() {
-    document.addEventListener("keydown", (event) => {
+    document.addEventListener('keydown', (event) => {
       arrayOfKeys.forEach((el) => {
         if (event.code === el.code) {
-          document.getElementById(`${event.code}`).classList.add("active");
+          document.getElementById(`${event.code}`).classList.add('active');
         }
       });
     });
   }
 
   keyupListener() {
-    document.addEventListener("keyup", (event) => {
+    document.addEventListener('keyup', (event) => {
       arrayOfKeys.forEach((el) => {
         if (event.code === el.code) {
-          document.getElementById(`${event.code}`).classList.remove("active");
+          document.getElementById(`${event.code}`).classList.remove('active');
         }
       });
     });
   }
 
   specialFeatures() {
-    const textarea = document.querySelector(".textarea");
-    document.addEventListener("keydown", (event) => {
+    const textarea = document.querySelector('.textarea');
+    document.addEventListener('keydown', (event) => {
       arrayOfKeys.forEach((el) => {
         if (event.code === el.code) {
           if (
-            event.code === "ArrowUp" ||
-            event.code === "ArrowLeft" ||
-            event.code === "ArrowRight" ||
-            event.code === "ArrowDown"
+            event.code === 'ArrowUp'
+            || event.code === 'ArrowLeft'
+            || event.code === 'ArrowRight'
+            || event.code === 'ArrowDown'
           ) {
             textarea.value += el.text;
-          } else if (event.code === "Tab") {
+          } else if (event.code === 'Tab') {
             event.preventDefault();
-            textarea.value += "    ";
-          } else if (event.code === "AltLeft" || event.code === "AltRight") {
+            textarea.value += '    ';
+          } else if (event.code === 'AltLeft' || event.code === 'AltRight') {
             event.preventDefault();
           }
         }
