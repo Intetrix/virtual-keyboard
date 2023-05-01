@@ -8,7 +8,8 @@ export class MouseClick {
       keys.forEach((el) => {
         if (el1.code === el.id);
         el.addEventListener('click', (event) => {
-          if (el.type === 'letter' || el.type === 'number') {
+          if (el1.type === 'letter' || el1.type === 'number') {
+            console.log(el);
             textarea.value += event.target.innerHTML;
           }
         });
