@@ -4,15 +4,25 @@ export class MouseClick {
   constructor() {
     const keys = document.querySelectorAll('.keys');
     const textarea = document.querySelector('.textarea');
-    arrayOfKeys.forEach((el1) => {
+    /*arrayOfKeys.forEach((obj) => {
       keys.forEach((el) => {
-        if (el1.code === el.id);
-        el.addEventListener('click', (event) => {
-          if (el1.type === 'letter' || el1.type === 'number') {
-            console.log(el);
-            textarea.value += event.target.innerHTML;
-          }
-        });
+        if (obj.code === el.id);
+        el.onclick = (event) => {
+            textarea.value += event.target.textContent;
+        }
+      });
+    });*/
+    arrayOfKeys.forEach((obj) => {
+      keys.forEach((el) => {
+        if (el.id === obj.code && (obj.type === 'letter' || obj.type === 'number' || obj.type === 'arrow')) {
+          el.addEventListener('click', (event) => {
+            textarea.value += obj.text;
+          });
+        } else if (el.id === obj.code && (obj.type === 'tab')) {
+          el.addEventListener('click', (event) => {
+            textarea.value += '    ';
+          });
+        }
       });
     });
   }

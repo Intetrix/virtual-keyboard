@@ -121,7 +121,7 @@ export const arrayOfKeys = [
   },
   {
     eventWhich: 9,
-    type: 'control',
+    type: 'tab',
     className: 'keys, tab-key',
     text: 'Tab',
     code: 'Tab',
